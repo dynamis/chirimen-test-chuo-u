@@ -9,7 +9,7 @@ async function connect() {
   msg.innerHTML = "micro:bit BLE接続しました。";
   var gpioAccess = await microBitBle.requestGPIOAccess();
   var mbGpioPorts = gpioAccess.ports;
-  gpioPort0 = mbGpioPorts.get(1);
+  gpioPort0 = mbGpioPorts.get(0);
   await gpioPort0.export("out"); //port0 out
   blinkEnable = true;
   LEDblink();
